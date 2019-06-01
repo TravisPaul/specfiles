@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Optional environment variables
+#	KEYID - GPG Key ID for signing RPMs 
+#
+# Required executables:
+#	rpmlint
+#	spectool
+#	rpmbuild
+#	rpmsign
+
+set -euo pipefail
+
+mach="$(uname -m)"
+keyid="${KEYID-A8ED3A64}"
+package="$1"
+
+if [ ! -d ~/rpmbuild ]; then
+	rpmdev-setuptree
+fi
+
+rpmlint -iv "$package/$package.spec"
+
+cp "$package/$package.spec" ~/rpmbuild/SPECS
+
+spectool -g -R ~/rpmbuild/SPECS/"$package.spec"
+
+rpmbuild -ba ~/rpmbuild/SPECS/"$package.spec"
+
+rpmsign --key-id "$keyid" --addsign ~/rpmbuild/RPMS/"$mach"/"${package}"*."${mach}".rpm
+
+rpm -qpi ~/rpmbuild/RPMS/"$mach"/"${package}"*."${mach}".rpm | grep Signature 
