@@ -4,8 +4,8 @@ Version:       20180222
 Release:       2%{?dist}
 License:       BSD with advertising
 Group:         Development/Tools
-URL:           ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
-Source0:       ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/bmake-%{version}.tar.gz
+URL:           https://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
+Source0:       https://ftp.NetBSD.org/pub/NetBSD/misc/sjg/bmake-%{version}.tar.gz
 Requires:      mk-files
 BuildRequires: mk-files
 BuildRequires: util-linux
