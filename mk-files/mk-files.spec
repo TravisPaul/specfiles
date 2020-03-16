@@ -4,8 +4,8 @@ Version:   20170505
 Release:   1%{?dist}
 License:   BSD
 Group:     Development/Tools
-URL:       ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
-Source0:   ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/mk-%{version}.tar.gz
+URL:       https://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
+Source0:   https://ftp.NetBSD.org/pub/NetBSD/misc/sjg/mk-%{version}.tar.gz
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
