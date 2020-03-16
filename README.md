@@ -6,7 +6,7 @@ Specfiles for RPMs not found where I need them (often missing from EPEL) or pers
 | Package  | Status |
 |----------|--------|
 | mk-files | [![Copr build status](https://copr.fedorainfracloud.org/coprs/travispaul/netbsd-packages/package/mk-files/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/travispaul/netbsd-packages/package/mk-files/)
-
+| bmake | [![Copr build status](https://copr.fedorainfracloud.org/coprs/travispaul/netbsd-packages/package/bmake/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/travispaul/netbsd-packages/package/bmake/)
 ## License
 
 The spec files themselves (foo.spec) are MIT licensed as per the [Fedora Guidelines](https://fedoraproject.org/wiki/Licensing:Main?rd=Licensing#License_of_Fedora_SPEC_Files):
